@@ -17,7 +17,21 @@
     </header>
     <!--ОСНОВНОЕ СОДЕРЖИМОЕ-->
     <main class="main">
-        
+        <section class="form-box">
+            <h1>Вход в систему</h1>
+
+            <!--ФОРМА ВХОДА-->
+            <form method="post" action="/login.html">
+                <label for="login">Логин</label>
+                <input id="login" name="login" type="text">
+
+                <label for="password">Пароль</label>
+                <input id="password" name="password" type="password">
+
+                <button type="submit">Войти</button>
+            </form>
+            <p>Ещё не зарегистрированы? <a href="/register">Регистрация</a></p>
+        </section>
     </main>
     <!--ПОДВАЛ-->
     <footer class="footer">
