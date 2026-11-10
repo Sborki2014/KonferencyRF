@@ -25,18 +25,23 @@
             <form method="post" action="/register"> 
                 <label for="login">Придумайте логин</label>
                 <input id="login" name="login" type="text" placeholder="ivanov2027" required>
+                <div class="form__error"></div>
 
                 <label for="email">E-mail</label>
                 <input id="email" name="email" type="email" placeholder="name@example.ru" required>
+                <div class="form__error"></div>
 
                 <label for="password">Придумайте пароль</label>
                 <input id="password" name="password" type="password" placeholder="Пароль" required>
+                <div class="form__error"></div>
 
                 <label for="fullname">Ваше ФИО</label>
                 <input id="fullname" name="fullname" type="text" placeholder="Иванов Иван Иванович" required>
+                <div class="form__error"></div>
 
                 <label for="phone">Ваш номер телефона</label>
                 <input id="phone" name="phone" type="tel" placeholder="8(900)123-45-67" required>
+                <div class="form__error"></div>
 
                 <button type="submit">Создать пользователя</button>
             </form>
