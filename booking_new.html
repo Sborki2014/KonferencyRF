@@ -6,6 +6,23 @@
     <title>Бронирование помещения</title>
 </head>
 <body>
-    
+    <form action="" method="post">
+        <label for="room_name">Помещения:</label>
+        <input type="text" id="room_name" name="room_name" placeholder="Кинозал 'Премьер' required">
+
+
+        <label for="start_date">Дата начала конференции:</label><br>
+        <input type="text" id="start_date" name="start_date" placeholder="ДД.ММ.ГГГГ" required>
+
+
+        <p>Способ оплаты:</p>
+        <input type="radio" id="pay1" name="payment_method" value="При очном посещении">
+        <label for="pay1">При очном посещении</label>
+        
+        <input type="radio" id="pay2" name="payment_method" value="Перевод по СБП">
+        <label for="pay2">Перевод по СБП</label>
+
+        <button type="submit">Отправить</button>
+    </form>
 </body>
 </html>
