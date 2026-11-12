@@ -1,16 +1,35 @@
 :root {
+    /* ЦВЕТОВАЯ ПАЛИТРА */
     --color-primary: #1f4e8c; /* Основной цвет */
     --color-accent: #f2a541; /* акцент */
     --color-bg: #f5f7fd; /* фон */
     --color-text: #1e2430; /* текст */
     --color-modtext: #1e24309a; /* приглушённый текст */
     --color-error: #cc211b; /* цвет ошибки */
+
+
+    /* ШРИФТЫ И ИЕРАРХИЯ */
+    --font-h1: 2rem; /* 32px - заголовок страницы */
+    --font-h2: 1.375rem; /* 22px - заголовок карточки */
+    --font-text: 1rem; /* 16px - основной текст */
+    --font-small: 0.875rem; /* 14px - подсказки, подвал */
 }
+
+
+
 
 body {
     font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: var(--font-text);
     background-color: var(--color-bg);
     color: var(--color-text);
+}
+
+h1{
+    font-size: var(--font-h1);
+}
+h2{
+    font-size: var(--font-h2);
 }
 
 header {
@@ -20,4 +39,43 @@ header {
 footer {
     background-color: #272829;
     color: #e6e9f1;
+    font-size: var(--font-small);
+}
+
+.form-box{
+    background-color: #ffffff;
+    max-width: 480px;
+    margin: 2rem auto;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(30, 36, 48, 0.08);
+}
+
+.form__error{
+    color: var(--color-error);
+    font-size: var(--font-small);
+}
+
+
+
+
+
+
+
+
+.form-box label {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.35rem;
+}
+
+.form-box input {
+    display: block;
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    box-sizing: border-box;
+}
+
+.form-box button {
+    margin-top: 1.25rem;
 }
