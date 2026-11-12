@@ -23,11 +23,15 @@
             <!--ФОРМА ВХОДА-->
             <div class="message"></div>
             <form method="post" action="/login.html">
+                
                 <label for="login">Логин</label>
                 <input id="login" name="login" type="text">
+                <div class="form__error"></div>
 
                 <label for="password">Пароль</label>
                 <input id="password" name="password" type="password">
+                <div class="form__error"></div>
+
 
                 <button type="submit">Войти</button>
             </form>
