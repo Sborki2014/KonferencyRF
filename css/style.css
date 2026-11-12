@@ -1,0 +1,23 @@
+:root {
+    --color-primary: #1f4e8c; /* Основной цвет */
+    --color-accent: #f2a541; /* акцент */
+    --color-bg: #f5f7fd; /* фон */
+    --color-text: #1e2430; /* текст */
+    --color-modtext: #1e24309a; /* приглушённый текст */
+    --color-error: #cc211b; /* цвет ошибки */
+}
+
+body {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+header {
+    background-color: var(--color-primary);
+}
+
+footer {
+    background-color: #272829;
+    color: #e6e9f1;
+}
