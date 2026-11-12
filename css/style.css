@@ -36,6 +36,17 @@ h2{
     background-color: var(--color-primary);
 }
 
+.header__inner{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+
+
+
+
 .footer {
     background-color: #272829;
     color: #e6e9f1;
@@ -55,10 +66,6 @@ h2{
     color: var(--color-error);
     font-size: var(--font-small);
 }
-
-
-
-
 
 
 

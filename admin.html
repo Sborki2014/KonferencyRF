@@ -7,8 +7,19 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Панель администратора</h1>
+    <!--ШАПКА-->
+    <header class="header">
+        <div class="header__inner">
+            <a class="header__logo" href="/">Конференции.РФ</a>
+            <nav class="nav">
+                <a class="nav__link" href="login.html">Вход</a>
+                <a class="nav__link" href="register.html">Регистрация</a>
+            </nav>
+        </div>
+    </header>
 
+    
+    <h1>Панель администратора</h1>
     <form action="" method="get">
         <label for="status_filter">Фильтр по статусу:</label>
         <select id="status_filter" name="filter_status">
