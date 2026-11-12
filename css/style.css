@@ -32,11 +32,11 @@ h2{
     font-size: var(--font-h2);
 }
 
-header {
+.header {
     background-color: var(--color-primary);
 }
 
-footer {
+.footer {
     background-color: #272829;
     color: #e6e9f1;
     font-size: var(--font-small);
