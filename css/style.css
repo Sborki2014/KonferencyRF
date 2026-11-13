@@ -15,19 +15,25 @@
     --font-small: 0.875rem; /* 14px - подсказки, подвал */
 }
 
-.main {
-    animation: fade-in 0.5s ease;   /* содержимое каждой страницы плавно появляется */
-}
-
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
     font-family: "Segoe UI", Roboto, Arial, sans-serif;
     font-size: var(--font-text);
     background-color: var(--color-bg);
     color: var(--color-text);
 }
 
+.main {
+    animation: fade-in 0.5s ease;   /* содержимое каждой страницы плавно появляется */
+    flex: 1;
+}
+
 h1{
     font-size: var(--font-h1);
+    text-align: center;
 }
 h2{
     font-size: var(--font-h2);
@@ -35,6 +41,8 @@ h2{
 
 .header {
     background-color: var(--color-primary);
+    padding: 16px 0;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.01);
 }
 
 .header__inner{
@@ -45,12 +53,17 @@ h2{
 
 .header__logo {
     color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 700;
     text-decoration: none;
 }
 
+.header__logo:hover{
+    color: var(--color-accent);
+}
 .nav {
     display: flex;
-    gap: 20px;
+    gap: 24px;
 }
 
 .nav__link {
@@ -67,7 +80,13 @@ h2{
 .footer {
     background-color: #272829;
     color: #ffffff;
+    padding: 20px 0;
+    margin-top: auto;
     font-size: var(--font-small);
+}
+
+.footer p {
+    margin: 0;
 }
 
 .card {
