@@ -55,17 +55,38 @@ h2{
 .nav__link {
     color: #ffffff;
     text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav__link:hover{
+    color: var(--color-accent);
+    text-decoration: underline;
 }
 
 .footer {
     background-color: #272829;
-    color: #e6e9f1;
+    color: #ffffff;
     font-size: var(--font-small);
 }
 
 
+button {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+button:hover {
+    transform: translateY(-2px); /* кнопка «приподнимается» */
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2); /* и отбрасывает тень */
+}
 
+.card {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08); /* Базовая легкая тень в обычном состоянии */
+    transition: transform 0.25s ease, box-shadow 0.25s ease; /* Плавный переход для подъема и тени */
+}
 
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
 
 
 
@@ -98,4 +119,12 @@ h2{
 
 .form-box button {
     margin-top: 1.25rem;
+}
+
+@keyframes fade-in {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+.main {
+    animation: fade-in 0.5s ease;   /* содержимое каждой страницы плавно появляется */
 }
