@@ -121,10 +121,22 @@ button:hover {
     margin-top: 1.25rem;
 }
 
+
+@media (max-width: 576px) {
+    :root {
+        --font-h1: 1.5rem;          /* заголовки чуть меньше */
+    }
+    .header__inner {
+        flex-direction: column;     /* логотип и меню друг под другом */
+        align-items: flex-start;
+    }
+}
+
 @keyframes fade-in {
     from { opacity: 0; transform: translateY(10px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+
 .main {
     animation: fade-in 0.5s ease;   /* содержимое каждой страницы плавно появляется */
 }
