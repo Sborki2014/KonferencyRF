@@ -19,25 +19,38 @@
         </div>
     </header>
 
-    
-    <form action="" method="post">
-        <label class="form-label" for="room_name">Помещения:</label>
-        <input class="form-control" type="text" id="room_name" name="room_name" placeholder="Кинозал 'Премьер' required">
+    <!--ОСНОВНОЕ СОДЕРЖИМОЕ-->
+    <main class="main container my-4">
+        <h1 class="mb-4">Бронирование помещения</h1>
 
+        <form action="" method="post">
+            <div class="mb-3">
+                <label class="form-label" for="room_name">Помещения:</label>
+                <input class="form-control" type="text" id="room_name" name="room_name" placeholder="Кинозал 'Премьер'" required>
+            </div>
 
-        <label class="form-label" for="start_date">Дата начала конференции:</label><br>
-        <input class="form-control" type="text" id="start_date" name="start_date" placeholder="ДД.ММ.ГГГГ" required>
+            <div class="mb-3">
+                <label class="form-label" for="start_date">Дата начала конференции:</label>
+                <input class="form-control" type="text" id="start_date" name="start_date" placeholder="ДД.ММ.ГГГГ" required>
+            </div>
 
+            <div class="mb-3">
+                <p class="form-label">Способ оплаты:</p>
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="pay1" name="payment_method" value="При очном посещении" required>
+                    <label class="form-check-label" for="pay1">При очном посещении</label>
+                </div>
 
-        <p>Способ оплаты:</p>
-        <input class="form-control" type="radio" id="pay1" name="payment_method" value="При очном посещении">
-        <label class="form-label" for="pay1">При очном посещении</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="pay2" name="payment_method" value="Перевод по СБП">
+                    <label class="form-check-label" for="pay2">Перевод по СБП</label>
+                </div>
+            </div>
 
-        <input class="form-control" type="radio" id="pay2" name="payment_method" value="Перевод по СБП">
-        <label class="form-label" for="pay2">Перевод по СБП</label>
-
-        <button class="btn btn-primary" type="submit">Отправить</button>
-    </form>
+            <button class="btn btn-primary" type="submit">Отправить</button>
+        </form>
+    </main>
 
     <!--ПОДВАЛ-->
     <footer class="footer">
