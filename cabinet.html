@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Линый Кабинет - Конференции.РФ</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <!--ШАПКА-->
     <header class="header">
         <div class="header__inner">
-            <a class="header__logo" href="/">Конференции.РФ</a>
+            <a class="header__logo" href="index.html">Конференции.РФ</a>
             <nav class="nav">
                 <a class="nav__link" href="login.html">Вход</a>
                 <a class="nav__link" href="register.html">Регистрация</a>
@@ -20,20 +20,20 @@
 
 
     <h1>Мои заявки</h1>
-    <article>
-        <h2>Заявка №1</h2>
-        <p>Помещение: Кинозал "Премьера"</p>
-        <p>Дата начала конференции: 15.11.2026</p>
-        <p>Способ оплаты: Перевод по СБП</p>
-        <p>Статус: <span class="status">Новая</span></p>
+    <article class="card">
+        <h2 class="card__title">Заявка №1</h2>
+        <p class="card__text">Помещение: Кинозал "Премьера"</p>
+        <p class="card__text">Дата начала конференции: 15.11.2026</p>
+        <p class="card__text">Способ оплаты: Перевод по СБП</p>
+        <p class="card__text">Статус: <span class="status">Новая</span></p>
     </article>
 
-    <article>
-        <h2>Заявка №2</h2>
-        <p>Помещение: Конференц-зал «Атриум»</p>
-        <p>Дата начала конференции: 01.11.2026</p>
-        <p>Способ оплаты: При очном посещении</p>
-        <p>Статус: <span class="status">Завершено</span></p>
+    <article class="card">
+        <h2 class="card__title">Заявка №2</h2>
+        <p class="card__text">Помещение: Конференц-зал «Атриум»</p>
+        <p class="card__text">Дата начала конференции: 01.11.2026</p>
+        <p class="card__text">Способ оплаты: При очном посещении</p>
+        <p class="card__text">Статус: <span class="status">Завершено</span></p>
     </article>
 
     <form action="" method="post">
@@ -42,5 +42,10 @@
 
         <button type="submit">Оставить отзыв</button>
     </form>
+
+    <!--ПОДВАЛ-->
+    <footer class="footer">
+        <p>© 2027 Конференции.РФ</p>
+    </footer>
 </body>
 </html>

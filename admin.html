@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Админ-Панель - Конференции.РФ</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <!--ШАПКА-->
     <header class="header">
         <div class="header__inner">
-            <a class="header__logo" href="/">Конференции.РФ</a>
+            <a class="header__logo" href="index.html">Конференции.РФ</a>
             <nav class="nav">
                 <a class="nav__link" href="login.html">Вход</a>
                 <a class="nav__link" href="register.html">Регистрация</a>
@@ -31,14 +31,14 @@
         <button type="submit">Применить</button>
     </form>
 
-    <article>
-        <h2>Заявка №1</h2>
-        <p>ФИО: Иванов Иван Иванович</p>
-        <p>Телефон: +7(777)-777-77-77</p>
-        <p>Помещение: Конференц-зал «Атриум»</p>
-        <p>Дата: 01.11.2026</p>
-        <p>Способ оплаты: Перевод по СБП</p>
-        <p>Статус: <span class="status">Новая</span></p>
+    <article class="card">
+        <h2 class="card__title">Заявка №1</h2>
+        <p class="card__text">ФИО: Иванов Иван Иванович</p>
+        <p class="card__text">Телефон: +7(777)-777-77-77</p>
+        <p class="card__text">Помещение: Конференц-зал «Атриум»</p>
+        <p class="card__text">Дата: 01.11.2026</p>
+        <p class="card__text">Способ оплаты: Перевод по СБП</p>
+        <p class="card__text">Статус: <span class="status">Новая</span></p>
 
         <form action="" method="post">
             <label for="status_1">Изменить статус:</label>
@@ -51,14 +51,14 @@
         </form>
     </article>
 
-     <article>
-        <h2>Заявка №2</h2>
-        <p>ФИО: Петрова Анна Сергеевна</p>
-        <p>Телефон: +7(999)-123-45-67</p>
-        <p>Помещение: Кинозал «Премьер»</p>
-        <p>Дата: 15.11.2026</p>
-        <p>Способ оплаты: При очном посещении</p>
-        <p>Статус: <span class="status">Мероприятие назначено</span></p>
+     <article class="card">
+        <h2 class="card__title">Заявка №2</h2>
+        <p class="card__text">ФИО: Петрова Анна Сергеевна</p>
+        <p class="card__text">Телефон: +7(999)-123-45-67</p>
+        <p class="card__text">Помещение: Кинозал «Премьер»</p>
+        <p class="card__text">Дата: 15.11.2026</p>
+        <p class="card__text">Способ оплаты: При очном посещении</p>
+        <p class="card__text">Статус: <span class="status">Мероприятие назначено</span></p>
 
         <form action="" method="post">
             <label for="status_2">Изменить статус:</label>
@@ -71,14 +71,14 @@
         </form>
     </article>
 
-    <article>
-        <h2>Заявка №3</h2>
-        <p>ФИО: Сидоров Алексей Викторович</p>
-        <p>Телефон: +7(916)-555-33-22</p>
-        <p>Помещение: Лекторий «Горизонт»</p>
-        <p>Дата: 20.10.2026</p>
-        <p>Способ оплаты: Перевод по СБП</p>
-        <p>Статус: <span class="status">Завершено</span></p>
+    <article class="card">
+        <h2 class="card__title">Заявка №3</h2>
+        <p class="card__text">ФИО: Сидоров Алексей Викторович</p>
+        <p class="card__text">Телефон: +7(916)-555-33-22</p>
+        <p class="card__text">Помещение: Лекторий «Горизонт»</p>
+        <p class="card__text">Дата: 20.10.2026</p>
+        <p class="card__text">Способ оплаты: Перевод по СБП</p>
+        <p class="card__text">Статус: <span class="status">Завершено</span></p>
 
         <form action="" method="post">
             <label for="status_3">Изменить статус:</label>
@@ -91,5 +91,9 @@
         </form>
     </article>
 
+    <!--ПОДВАЛ-->
+    <footer class="footer">
+        <p>© 2027 Конференции.РФ</p>
+    </footer>
 </body>
 </html>
