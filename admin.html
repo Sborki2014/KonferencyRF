@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Админ-Панель - Конференции.РФ</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
@@ -18,82 +19,102 @@
         </div>
     </header>
 
-    
-    <h1>Панель администратора</h1>
-    <form action="" method="get">
-        <label for="status_filter">Фильтр по статусу:</label>
-        <select id="status_filter" name="filter_status">
-            <option value="all">Все</option>
-            <option value="new">Новая</option>
-            <option value="scheduled">Мероприятие назначено</option>
-            <option value="completed">Завершено</option>
-        </select>
-        <button type="submit">Применить</button>
-    </form>
+    <main class="main container my-4">
+        <h1 class="mb-4">Панель администратора</h1>
 
-    <article class="card">
-        <h2 class="card__title">Заявка №1</h2>
-        <p class="card__text">ФИО: Иванов Иван Иванович</p>
-        <p class="card__text">Телефон: +7(777)-777-77-77</p>
-        <p class="card__text">Помещение: Конференц-зал «Атриум»</p>
-        <p class="card__text">Дата: 01.11.2026</p>
-        <p class="card__text">Способ оплаты: Перевод по СБП</p>
-        <p class="card__text">Статус: <span class="status">Новая</span></p>
-
-        <form action="" method="post">
-            <label for="status_1">Изменить статус:</label>
-            <select id="status_1" name="status">
-                <option value="new" selected>Новая</option>
-                <option value="scheduled">Мероприятие назначено</option>
-                <option value="completed">Завершено</option>
-            </select>
-            <button type="submit">Сохранить статус</button>
+        <form class="mb-4" action="" method="get">
+            <div class="mb-3">
+                <label class="form-label" for="status_filter">Фильтр по статусу:</label>
+                <select class="form-select" id="status_filter" name="filter_status">
+                    <option value="all">Все</option>
+                    <option value="new">Новая</option>
+                    <option value="scheduled">Мероприятие назначено</option>
+                    <option value="completed">Завершено</option>
+                </select>
+            </div>
+            <button class="btn btn-primary" type="submit">Применить</button>
         </form>
-    </article>
 
-     <article class="card">
-        <h2 class="card__title">Заявка №2</h2>
-        <p class="card__text">ФИО: Петрова Анна Сергеевна</p>
-        <p class="card__text">Телефон: +7(999)-123-45-67</p>
-        <p class="card__text">Помещение: Кинозал «Премьер»</p>
-        <p class="card__text">Дата: 15.11.2026</p>
-        <p class="card__text">Способ оплаты: При очном посещении</p>
-        <p class="card__text">Статус: <span class="status">Мероприятие назначено</span></p>
+        <!-- СЕТКА КАРТОЧЕК -->
+        <div class="row g-3">
+            <div class="col-12 col-md-6 col-xl-4">
+                <article class="card h-100 p-3">
+                    <h2 class="card__title">Заявка №1</h2>
+                    <p class="card__text">ФИО: Иванов Иван Иванович</p>
+                    <p class="card__text">Телефон: +7(777)-777-77-77</p>
+                    <p class="card__text">Помещение: Конференц-зал «Атриум»</p>
+                    <p class="card__text">Дата: 01.11.2026</p>
+                    <p class="card__text">Способ оплаты: Перевод по СБП</p>
+                    <p class="card__text">Статус: <span class="status">Новая</span></p>
 
-        <form action="" method="post">
-            <label for="status_2">Изменить статус:</label>
-            <select id="status_2" name="status">
-                <option value="new">Новая</option>
-                <option value="scheduled" selected>Мероприятие назначено</option>
-                <option value="completed">Завершено</option>
-            </select>
-            <button type="submit">Сохранить статус</button>
-        </form>
-    </article>
+                    <form class="mt-auto" action="" method="post">
+                        <div class="mb-2">
+                            <label class="form-label" for="status_1">Изменить статус:</label>
+                            <select class="form-select" id="status_1" name="status">
+                                <option value="new" selected>Новая</option>
+                                <option value="scheduled">Мероприятие назначено</option>
+                                <option value="completed">Завершено</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary" type="submit">Сохранить статус</button>
+                    </form>
+                </article>
+            </div>
 
-    <article class="card">
-        <h2 class="card__title">Заявка №3</h2>
-        <p class="card__text">ФИО: Сидоров Алексей Викторович</p>
-        <p class="card__text">Телефон: +7(916)-555-33-22</p>
-        <p class="card__text">Помещение: Лекторий «Горизонт»</p>
-        <p class="card__text">Дата: 20.10.2026</p>
-        <p class="card__text">Способ оплаты: Перевод по СБП</p>
-        <p class="card__text">Статус: <span class="status">Завершено</span></p>
+            <div class="col-12 col-md-6 col-xl-4">
+                <article class="card h-100 p-3">
+                    <h2 class="card__title">Заявка №2</h2>
+                    <p class="card__text">ФИО: Петрова Анна Сергеевна</p>
+                    <p class="card__text">Телефон: +7(999)-123-45-67</p>
+                    <p class="card__text">Помещение: Кинозал «Премьер»</p>
+                    <p class="card__text">Дата: 15.11.2026</p>
+                    <p class="card__text">Способ оплаты: При очном посещении</p>
+                    <p class="card__text">Статус: <span class="status">Мероприятие назначено</span></p>
 
-        <form action="" method="post">
-            <label for="status_3">Изменить статус:</label>
-            <select id="status_3" name="status">
-                <option value="new">Новая</option>
-                <option value="scheduled">Мероприятие назначено</option>
-                <option value="completed" selected>Завершено</option>
-            </select>
-            <button type="submit">Сохранить статус</button>
-        </form>
-    </article>
+                    <form class="mt-auto" action="" method="post">
+                        <div class="mb-2">
+                            <label class="form-label" for="status_2">Изменить статус:</label>
+                            <select class="form-select" id="status_2" name="status">
+                                <option value="new">Новая</option>
+                                <option value="scheduled" selected>Мероприятие назначено</option>
+                                <option value="completed">Завершено</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary" type="submit">Сохранить статус</button>
+                    </form>
+                </article>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-4">
+                <article class="card h-100 p-3">
+                    <h2 class="card__title">Заявка №3</h2>
+                    <p class="card__text">ФИО: Сидоров Алексей Викторович</p>
+                    <p class="card__text">Телефон: +7(916)-555-33-22</p>
+                    <p class="card__text">Помещение: Лекторий «Горизонт»</p>
+                    <p class="card__text">Дата: 20.10.2026</p>
+                    <p class="card__text">Способ оплаты: Перевод по СБП</p>
+                    <p class="card__text">Статус: <span class="status">Завершено</span></p>
+
+                    <form class="mt-auto" action="" method="post">
+                        <div class="mb-2">
+                            <label class="form-label" for="status_3">Изменить статус:</label>
+                            <select class="form-select" id="status_3" name="status">
+                                <option value="new">Новая</option>
+                                <option value="scheduled">Мероприятие назначено</option>
+                                <option value="completed" selected>Завершено</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary" type="submit">Сохранить статус</button>
+                    </form>
+                </article>
+            </div>
+        </div>
+    </main>
 
     <!--ПОДВАЛ-->
     <footer class="footer">
         <p>© 2027 Конференции.РФ</p>
     </footer>
+    <script type="module" src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

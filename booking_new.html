@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Бронирование помещения - Конференции.РФ</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
@@ -20,27 +21,28 @@
 
     
     <form action="" method="post">
-        <label for="room_name">Помещения:</label>
-        <input type="text" id="room_name" name="room_name" placeholder="Кинозал 'Премьер' required">
+        <label class="form-label" for="room_name">Помещения:</label>
+        <input class="form-control" type="text" id="room_name" name="room_name" placeholder="Кинозал 'Премьер' required">
 
 
-        <label for="start_date">Дата начала конференции:</label><br>
-        <input type="text" id="start_date" name="start_date" placeholder="ДД.ММ.ГГГГ" required>
+        <label class="form-label" for="start_date">Дата начала конференции:</label><br>
+        <input class="form-control" type="text" id="start_date" name="start_date" placeholder="ДД.ММ.ГГГГ" required>
 
 
         <p>Способ оплаты:</p>
-        <input type="radio" id="pay1" name="payment_method" value="При очном посещении">
-        <label for="pay1">При очном посещении</label>
+        <input class="form-control" type="radio" id="pay1" name="payment_method" value="При очном посещении">
+        <label class="form-label" for="pay1">При очном посещении</label>
 
-        <input type="radio" id="pay2" name="payment_method" value="Перевод по СБП">
-        <label for="pay2">Перевод по СБП</label>
+        <input class="form-control" type="radio" id="pay2" name="payment_method" value="Перевод по СБП">
+        <label class="form-label" for="pay2">Перевод по СБП</label>
 
-        <button type="submit">Отправить</button>
+        <button class="btn btn-primary" type="submit">Отправить</button>
     </form>
 
     <!--ПОДВАЛ-->
     <footer class="footer">
         <p>© 2027 Конференции.РФ</p>
     </footer>
+    <script type="module" src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -15,8 +15,9 @@
     --font-small: 0.875rem; /* 14px - подсказки, подвал */
 }
 
-
-
+.main {
+    animation: fade-in 0.5s ease;   /* содержимое каждой страницы плавно появляется */
+}
 
 body {
     font-family: "Segoe UI", Roboto, Arial, sans-serif;
@@ -67,15 +68,6 @@ h2{
     background-color: #272829;
     color: #ffffff;
     font-size: var(--font-small);
-}
-
-
-button {
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-button:hover {
-    transform: translateY(-2px); /* кнопка «приподнимается» */
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2); /* и отбрасывает тень */
 }
 
 .card {
@@ -137,6 +129,24 @@ button:hover {
     to   { opacity: 1; transform: translateY(0); }
 }
 
-.main {
-    animation: fade-in 0.5s ease;   /* содержимое каждой страницы плавно появляется */
+
+/* КНОПКИ */
+button {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+button:hover {
+    transform: translateY(-2px); /* кнопка «приподнимается» */
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2); /* и отбрасывает тень */
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: #ffffff;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    background-color: var(--color-accent);
+    color: #ffffff;
 }

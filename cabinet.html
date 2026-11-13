@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Линый Кабинет - Конференции.РФ</title>
+    <title>Личный Кабинет - Конференции.РФ</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
@@ -18,34 +19,46 @@
         </div>
     </header>
 
+    <main class="main container my-4">
+        <h1 class="mb-4">Мои заявки</h1>
 
-    <h1>Мои заявки</h1>
-    <article class="card">
-        <h2 class="card__title">Заявка №1</h2>
-        <p class="card__text">Помещение: Кинозал "Премьера"</p>
-        <p class="card__text">Дата начала конференции: 15.11.2026</p>
-        <p class="card__text">Способ оплаты: Перевод по СБП</p>
-        <p class="card__text">Статус: <span class="status">Новая</span></p>
-    </article>
+        <!-- СЕТКА КАРТОЧЕК -->
+        <div class="row g-3 mb-4">
+            <div class="col-12 col-md-6 col-xl-4">
+                <article class="card h-100 p-3">
+                    <h2 class="card__title">Заявка №1</h2>
+                    <p class="card__text">Помещение: Кинозал "Премьера"</p>
+                    <p class="card__text">Дата начала конференции: 15.11.2026</p>
+                    <p class="card__text">Способ оплаты: Перевод по СБП</p>
+                    <p class="card__text">Статус: <span class="status">Новая</span></p>
+                </article>
+            </div>
 
-    <article class="card">
-        <h2 class="card__title">Заявка №2</h2>
-        <p class="card__text">Помещение: Конференц-зал «Атриум»</p>
-        <p class="card__text">Дата начала конференции: 01.11.2026</p>
-        <p class="card__text">Способ оплаты: При очном посещении</p>
-        <p class="card__text">Статус: <span class="status">Завершено</span></p>
-    </article>
+            <div class="col-12 col-md-6 col-xl-4">
+                <article class="card h-100 p-3">
+                    <h2 class="card__title">Заявка №2</h2>
+                    <p class="card__text">Помещение: Конференц-зал «Атриум»</p>
+                    <p class="card__text">Дата начала конференции: 01.11.2026</p>
+                    <p class="card__text">Способ оплаты: При очном посещении</p>
+                    <p class="card__text">Статус: <span class="status">Завершено</span></p>
+                </article>
+            </div>
+        </div>
 
-    <form action="" method="post">
-        <label for="review">Ваш отзыв:</label>
-        <textarea id="review" name="review" rows="4" cols="40" placeholder="Поделитесь Вашими впечатлениями о мероприятии" required></textarea>
+        <form action="" method="post">
+            <div class="mb-3">
+                <label class="form-label" for="review">Ваш отзыв:</label>
+                <textarea class="form-control" id="review" name="review" rows="4" placeholder="Поделитесь Вашими впечатлениями о мероприятии" required></textarea>
+            </div>
 
-        <button type="submit">Оставить отзыв</button>
-    </form>
+            <button class="btn btn-primary" type="submit">Оставить отзыв</button>
+        </form>
+    </main>
 
     <!--ПОДВАЛ-->
     <footer class="footer">
         <p>© 2027 Конференции.РФ</p>
     </footer>
+    <script type="module" src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

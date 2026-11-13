@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Вход - Конференции.РФ</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
@@ -28,16 +29,16 @@
             <div class="message"></div>
             <form method="post" action="/login.html">
                 
-                <label for="login">Логин</label>
-                <input id="login" name="login" type="text">
+                <label class="form-label" for="login">Логин</label>
+                <input class="form-control" id="login" name="login" type="text" class="form-control">
                 <div class="form__error"></div>
 
-                <label for="password">Пароль</label>
-                <input id="password" name="password" type="password">
+                <label class="form-label" for="password">Пароль</label>
+                <input class="form-control" id="password" name="password" type="password">
                 <div class="form__error"></div>
 
 
-                <button type="submit">Войти</button>
+                <button class="btn btn-primary" type="submit">Войти</button>
             </form>
             <p>Ещё не зарегистрированы? <a href="/register.html">Регистрация</a></p>
         </section>
@@ -46,5 +47,6 @@
     <footer class="footer">
         <p>© 2027 Конференции.РФ</p>
     </footer>
+    <script type="module" src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

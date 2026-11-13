@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Регистрация - Конференции.РФ</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
@@ -27,27 +28,27 @@
             <!--ФОРМА РЕГИСТРАЦИИ-->
             <div class="message"></div>
             <form method="post" action="/register"> 
-                <label for="login">Придумайте логин</label>
-                <input id="login" name="login" type="text" placeholder="ivanov2027" required>
+                <label class="form-label" for="login">Придумайте логин</label>
+                <input class="form-control" id="login" name="login" type="text" placeholder="ivanov2027" required>
                 <div class="form__error"></div>
 
-                <label for="email">E-mail</label>
-                <input id="email" name="email" type="email" placeholder="name@example.ru" required>
+                <label class="form-label" for="email">E-mail</label>
+                <input class="form-control" id="email" name="email" type="email" placeholder="name@example.ru" required>
                 <div class="form__error"></div>
 
-                <label for="password">Придумайте пароль</label>
-                <input id="password" name="password" type="password" placeholder="Пароль" required>
+                <label class="form-label" for="password">Придумайте пароль</label>
+                <input class="form-control" id="password" name="password" type="password" placeholder="Пароль" required>
                 <div class="form__error"></div>
 
-                <label for="fullname">Ваше ФИО</label>
-                <input id="fullname" name="fullname" type="text" placeholder="Иванов Иван Иванович" required>
+                <label class="form-label" for="fullname">Ваше ФИО</label>
+                <input class="form-control" id="fullname" name="fullname" type="text" placeholder="Иванов Иван Иванович" required>
                 <div class="form__error"></div>
 
-                <label for="phone">Ваш номер телефона</label>
-                <input id="phone" name="phone" type="tel" placeholder="8(900)123-45-67" required>
+                <label class="form-label" for="phone">Ваш номер телефона</label>
+                <input class="form-control" id="phone" name="phone" type="tel" placeholder="8(900)123-45-67" required>
                 <div class="form__error"></div>
 
-                <button type="submit">Создать пользователя</button>
+                <button class="btn btn-primary" type="submit">Создать пользователя</button>
             </form>
             <p>Уже зарегистрированы? <a href="login.html">Войти</a></p>
         </section>
@@ -56,5 +57,6 @@
     <footer class="footer">
         <p>© 2027 Конференции.РФ</p>
     </footer>
+    <script type="module" src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
