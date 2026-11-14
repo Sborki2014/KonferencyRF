@@ -27,7 +27,7 @@
 
             <!--ФОРМА РЕГИСТРАЦИИ-->
             <div class="message"></div>
-            <form method="post" action="/register"> 
+            <form id="registerForm" method="post" action="/register" novalidate> 
                 <label class="form-label" for="login">Придумайте логин</label>
                 <input class="form-control" id="login" name="login" type="text" placeholder="ivanov2027" required>
                 <div class="form__error"></div>
@@ -60,6 +60,6 @@
         </div>
     </footer>
     <script type="module" src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/js/validator.js"></script>
+    <script src="/js/validation.js"></script>
 </body>
 </html>
