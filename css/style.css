@@ -173,3 +173,18 @@ button:hover {
     background-color: var(--color-accent);
     color: #ffffff;
 }
+
+
+/* СТИЛИ СЛАЙДЕРА */
+.slider {
+    border-radius: 12px;
+    overflow: hidden;       /* скругляем углы картинок */
+}
+.slider__img {
+    height: 360px;
+    object-fit: cover;      /* картинка заполняет блок без искажения пропорций */
+}
+@media (max-width: 576px) {
+    .slider__img { height: 200px; }
+}
+

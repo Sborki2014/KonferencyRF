@@ -85,31 +85,34 @@ function checkField(input) {
 }
 
 
-// Находим форму по id и собираем все поля ввода внутри неё
-const registerForm = document.getElementById('registerForm');
-const formInputs = registerForm.querySelectorAll('input');
+// Находим форму регистрации ИЛИ форму входа на текущей странице
+const currentForm = document.querySelector('#registerForm') || document.querySelector('#loginForm');
 
-// Вешаем проверку на событие blur (потеря фокуса) для каждого поля
-formInputs.forEach((input) => {
-    input.addEventListener('blur', () => {
-        checkField(input);
-    });
-});
+// Выполняем код только если одна из форм найдена на странице
+if (currentForm) {
+    const formInputs = currentForm.querySelectorAll('input');
 
-
-// Вешаем проверку всех полей на отправку формы (submit)
-registerForm.addEventListener('submit', (event) => {
-    let isFormValid = true;
-
-    // Проверяем каждое поле по очереди
+    // Вешаем проверку на событие blur (потеря фокуса) для каждого поля
     formInputs.forEach((input) => {
-        if (!checkField(input)) {
-            isFormValid = false;
+        input.addEventListener('blur', () => {
+            checkField(input);
+        });
+    });
+
+    // Вешаем проверку всех полей на отправку формы (submit)
+    currentForm.addEventListener('submit', (event) => {
+        let isFormValid = true;
+
+        // Проверяем каждое поле по очереди
+        formInputs.forEach((input) => {
+            if (!checkField(input)) {
+                isFormValid = false;
+            }
+        });
+
+        // Если хотя бы одно поле не прошло проверку - отменяем отправку формы
+        if (!isFormValid) {
+            event.preventDefault();
         }
     });
-
-    // Если хотя бы одно поле не прошло проверку - отменяем отправку форм
-    if (!isFormValid) {
-        event.preventDefault();
-    }
-});
+}
