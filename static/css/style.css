@@ -1,0 +1,190 @@
+:root {
+    /* ЦВЕТОВАЯ ПАЛИТРА */
+    --color-primary: #1f4e8c; /* Основной цвет */
+    --color-accent: #f2a541; /* акцент */
+    --color-bg: #f5f7fd; /* фон */
+    --color-text: #1e2430; /* текст */
+    --color-modtext: #1e24309a; /* приглушённый текст */
+    --color-error: #cc211b; /* цвет ошибки */
+
+
+    /* ШРИФТЫ И ИЕРАРХИЯ */
+    --font-h1: 2rem; /* 32px - заголовок страницы */
+    --font-h2: 1.375rem; /* 22px - заголовок карточки */
+    --font-text: 1rem; /* 16px - основной текст */
+    --font-small: 0.875rem; /* 14px - подсказки, подвал */
+}
+
+.text-danger {
+    color: red !important;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: var(--font-text);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+.main {
+    animation: fade-in 0.5s ease;   /* содержимое каждой страницы плавно появляется */
+    flex: 1;
+}
+
+h1{
+    font-size: var(--font-h1);
+    text-align: center;
+}
+h2{
+    font-size: var(--font-h2);
+}
+
+.header {
+    background-color: var(--color-primary);
+    padding: 16px 0;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.01);
+}
+
+.header__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.header__logo:hover{
+    color: var(--color-accent);
+}
+.nav {
+    display: flex;
+    gap: 24px;
+}
+
+.nav__link {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav__link:hover{
+    color: var(--color-accent);
+    text-decoration: underline;
+}
+
+.footer {
+    background-color: #272829;
+    color: #ffffff;
+    padding: 20px 0;
+    margin-top: auto;
+    font-size: var(--font-small);
+}
+
+.footer p {
+    margin: 0;
+}
+
+.card {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08); /* Базовая легкая тень в обычном состоянии */
+    transition: transform 0.25s ease, box-shadow 0.25s ease; /* Плавный переход для подъема и тени */
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+
+.form-box{
+    background-color: #ffffff;
+    max-width: 480px;
+    margin: 2rem auto;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(30, 36, 48, 0.08);
+}
+
+.form__error{
+    color: var(--color-error);
+    font-size: var(--font-small);
+}
+
+.form-box label {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.35rem;
+}
+
+.form-box input {
+    display: block;
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    box-sizing: border-box;
+}
+
+.form-box button {
+    margin-top: 1.25rem;
+}
+
+
+@media (max-width: 576px) {
+    :root {
+        --font-h1: 1.5rem;          /* заголовки чуть меньше */
+    }
+    .header__inner {
+        flex-direction: column;     /* логотип и меню друг под другом */
+        align-items: flex-start;
+    }
+}
+
+@keyframes fade-in {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+
+/* КНОПКИ */
+button {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+button:hover {
+    transform: translateY(-2px); /* кнопка «приподнимается» */
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2); /* и отбрасывает тень */
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: #ffffff;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    background-color: var(--color-accent);
+    color: #ffffff;
+}
+
+
+/* СТИЛИ СЛАЙДЕРА */
+.slider {
+    border-radius: 12px;
+    overflow: hidden;       /* скругляем углы картинок */
+}
+.slider__img {
+    height: 360px;
+    object-fit: cover;      /* картинка заполняет блок без искажения пропорций */
+}
+@media (max-width: 576px) {
+    .slider__img { height: 200px; }
+}
+
