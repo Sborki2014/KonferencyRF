@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Конференции.РФ{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='node_modules/bootstrap/dist/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- ШАПКА -->
+    <header class="header">
+        <div class="header__inner container">
+            <a class="header__logo" href="{{ url_for('index') }}">Конференции.РФ</a>
+            <nav class="nav">
+                <a class="nav__link" href="{{ url_for('login') }}">Вход</a>
+                <a class="nav__link" href="{{ url_for('register') }}">Регистрация</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ОСНОВНОЕ СОДЕРЖИМОЕ -->
+    <main class="main">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- ПОДВАЛ -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__text">© 2027 Конференции.РФ</p>
+        </div>
+    </footer>
+
+    <script type="module" src="{{ url_for('static', filename='node_modules/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

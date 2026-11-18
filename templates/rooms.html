@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Помещения - Конференции.РФ{% endblock %}
+
+{% block content %}
+<section class="container mt-4">
+    <h1 class="mb-4">Доступные помещения</h1>
+
+    <div class="row">
+        {% for room in rooms %}
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        {% if room.room_type == 'Кинозал' %}
+                            <h5 class="card-title"><strong>{{ room.name }}</strong></h5>
+                            <p class="card-text"><strong>Тип: {{ room.room_type }}</strong></p>
+                        {% else %}
+                            <h5 class="card-title">{{ room.name }}</h5>
+                            <p class="card-text">Тип: {{ room.room_type }}</p>
+                        {% endif %}
+                        <p class="card-text"><small class="text-muted">ID помещения: {{ room.id }}</small></p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
